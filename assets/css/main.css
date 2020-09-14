@@ -1,0 +1,312 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Layout Global(Header & Footer) */
+
+.layout {
+    margin: 0;
+    border: .05rem;
+    background: linear-gradient(90deg, #009bfe, #02b8ff);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, .3);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+/* Header */
+
+.navigation {
+    margin: 0;
+    border: 1px;
+    padding: .3rem 1rem;
+    display: flex;
+    place-content: space-between;
+}
+
+.navigation__logo {
+    margin: .1rem;
+    border: 1px;
+    padding: 3px;
+    display: inline-flex;
+}
+
+.navigation__logo a {
+    display: flex;
+    align-self: center;
+    text-decoration: none;
+}
+
+.-icon {
+    border: 0;
+    padding: 2px;
+    width: 4.5rem;
+    height: 4.5rem;
+    display: block;
+}
+
+.-title {
+    border: 0;
+    padding: 2px;
+    font-weight: 700!important;
+    color: #fff;
+    font-size: 3rem;
+    align-items: center;
+}
+
+.navigation__menu {
+    margin: .1rem;
+    border: 1px;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navigation__menu a {
+    border: 1px;
+    border-right: 1px solid rgb(0, 204, 255);
+    padding: 5px 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Footer */
+
+.-footer {
+    box-shadow: 0 -4px 7px rgba(0, 0, 0, .3);
+    background: linear-gradient(243deg, #009bfe, #0a4199);
+    padding: .3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    margin: .1rem;
+    border: 1px;
+    padding: 3px;
+    display: flex;
+}
+
+.footer__logo .-icon {
+    border: 1px;
+    padding: 2px;
+    width: 5.5rem;
+    height: 5.5rem;
+    display: block;
+}
+
+.footer__logo a {
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.footer__logo .-title {
+    border: 1px;
+    padding: 2px;
+    font-weight: 900!important;
+    color: #fff;
+    font-size: 4.5rem;
+    align-items: center;
+}
+
+.footer__subtext {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, .6);
+    font-size: .9rem;
+    letter-spacing: .3rem;
+    margin-top: 1rem;
+}
+
+.footer__menu {
+    margin: .5rem .25rem;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer__menu a {
+    margin: .5rem;
+    padding: 2px;
+    text-decoration: none;
+    color: white;
+}
+
+.footer__social-link {
+    margin: .2rem;
+    padding: 5px;
+    border-bottom: 1px solid rgb(0, 204, 255);
+    display: flex;
+    color: white
+}
+
+.footer__social-link p {
+    margin: 2px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.footer__social-link a {
+    margin: 2px;
+    padding: 5px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.footer__copyright {
+    margin: 5px 1px;
+    padding: 5px;
+    font-size: 10px;
+    color: white;
+    letter-spacing: .08rem;
+}
+
+/* Global Header and footer ending */
+/* Global content */
+strong {
+    font-weight: bold;
+}
+
+/* MEDIA QUERY FOR DIFRENT TYPES OF SCREEN */
+
+/* Mobile small screen */
+
+@media (max-width: 400px) {
+    /* Header */
+    .navigation__menu a {
+        display: none;
+    }
+    .navigation__logo .-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .navigation__logo .-title {
+        font-size: 2rem;
+    }
+    .navigation {
+        place-content: center;
+    }
+    /* Content */
+    /* Footer */
+    .footer__logo .-title {
+        display: none;
+    }
+    .footer__logo .-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    .footer__subtext {
+        display: none;
+    }
+    .footer__menu {
+        margin: 1px;
+        font-size: x-small;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    .footer__menu a {
+        margin: 2px;
+        border-bottom: 1px solid rgb(0, 204, 255);
+    }
+    .footer__social-link {
+        display: none;
+    }
+    .footer__copyright {
+        margin: 0;
+        padding: 0;
+        font-size: 6px;
+    }
+}
+
+/* Mobile medium screen */
+
+@media (min-width: 401px) and (max-width: 500px) {
+    /* Header */
+    .navigation {
+        display: flex;
+        padding: 2px;
+        flex-shrink: 1;
+        flex-direction: column;
+        place-items: center;
+    }
+    .-icon {
+        height: 4rem;
+        width: 4rem;
+    }
+    .-title {
+        font-size: 2.7rem;
+    }
+    .navigation__menu a {
+        font-size: 1rem;
+    }
+    /* Content */
+    /* Footer */
+    .footer__logo .-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+    .footer__logo .-title {
+        font-size: 3.7rem;
+    }
+    .footer__subtext {
+        font-size: .6rem;
+        margin: 1px;
+    }
+    .footer__menu {
+        margin: 8px;
+    }
+    .footer__social-link {
+        margin: 0;
+        padding: 0;
+    }
+    .footer__social-link p {
+        font-size: 1rem;
+    }
+    .footer__social-link a {
+        font-size: 1rem;
+    }
+}
