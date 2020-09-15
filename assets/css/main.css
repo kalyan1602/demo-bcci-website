@@ -204,9 +204,152 @@ table {
 }
 
 /* Global Header and footer ending */
-/* Global content */
+
+/* Global contents */
+
 strong {
     font-weight: bold;
+}
+
+/* Content of History page */
+
+.container {
+    margin: .5rem;
+    border: 1px;
+    padding: 5px;
+    background: #F4F9FF;
+    box-shadow: 7px 0 4px rgba(0, 0, 0, .3), -7px 0 4px rgba(0, 0, 0, .3), 0 4px 7px rgba(0, 0, 0, .3), 0 -4px 7px rgba(0, 0, 0, .3);
+    font-family: sans-serif;
+    font-size: calc(1em * 0.875);
+    line-height: 1.6;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr;
+    gap: 5px 5px;
+    grid-template-areas: "intro intro intro" "links article-2 article-2" "links article-3 article-3";
+}
+
+/* Page links */
+
+.container__links {
+    /* background: #009bfe; */
+    grid-area: links;
+    margin: .5rem;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.l-wrap {
+    /* background: #009bfe; */
+    grid-area: links;
+    margin: .5rem;
+    padding: .5rem;
+    border: 1px solid black;
+    box-shadow: 3px 0 1px rgba(0, 0, 0, .3), -3px 0 1px rgba(0, 0, 0, .3), 0 1px 3px rgba(0, 0, 0, .3), 0 -1px 3px rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.l-heading {
+    padding: .5rem 5px;
+    margin: 5px;
+    border: 1px;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.l-wrap a {
+    margin: 2px;
+    border: 1px;
+    padding: .1rem 1.5rem;
+    ;
+    text-decoration: none;
+    font-size: .8rem;
+}
+
+/* Introduction */
+
+.container__article-1 {
+    /* background: rebeccapurple; */
+    grid-area: intro;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.i-heading {
+    padding: 1rem 5px;
+    margin: 5px;
+    border: 1px;
+    align-self: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.container__article-1 p {
+    padding: .5rem 1rem;
+    margin: 5px;
+    border: 1px;
+}
+
+/* Early Years article */
+
+.container__article-2 {
+    /* background: red; */
+    grid-area: article-2;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.a2-heading {
+    padding: .5rem 5px;
+    margin: 5px;
+    border: 1px;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container__article-2 p {
+    padding: .5rem 1rem;
+    margin: 5px;
+    border: 1px;
+}
+
+/* Reforms: 2017 Committee of Administrators (CoA) Article */
+
+.container__article-3 {
+    /* background: saddlebrown; */
+    grid-area: article-3;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.a3-heading {
+    padding: .5rem 5px;
+    margin: 5px;
+    border: 1px;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container__article-3 p {
+    padding: .5rem 1rem;
+    margin: 5px;
+    border: 1px;
 }
 
 /* MEDIA QUERY FOR DIFRENT TYPES OF SCREEN */
@@ -229,6 +372,65 @@ strong {
         place-content: center;
     }
     /* Content */
+    /* History Page */
+    /* Links */
+    .container__links {
+        display: none;
+    }
+    /* Intro */
+    .container {
+        display: flex;
+        flex-direction: column;
+        font-size: .7rem;
+        margin: 1px;
+        padding: 0;
+        border: 0;
+    }
+    .container__article-1 {
+        margin: 1px;
+        padding: 0;
+    }
+    .i-heading {
+        padding: 0;
+        margin: 1px;
+        border: 0;
+        font-size: .9rem;
+    }
+    .container__article-1 p {
+        padding: 3px;
+        margin: 1px;
+    }
+    /* Article 1 */
+    .container__article-2 {
+        margin: 1px;
+        padding: 0;
+    }
+    .a2-heading {
+        padding: 0;
+        margin: 1px;
+        border: 0;
+        font-size: .9rem;
+    }
+    .container__article-2 p {
+        padding: 3px;
+        margin: 1px;
+    }
+    /* Article 2 */
+    .container__article-3 {
+        margin: 1px;
+        padding: 0;
+    }
+    .a3-heading {
+        padding: 0;
+        margin: 1px;
+        border: 0;
+        font-size: .9rem;
+    }
+    .container__article-3 p {
+        padding: 3px;
+        margin: 1px;
+    }
+    /* History Page End */
     /* Footer */
     .footer__logo .-title {
         display: none;
@@ -284,6 +486,57 @@ strong {
         font-size: 1rem;
     }
     /* Content */
+    /* History Page */
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "intro" "links" "article-2" "article-3";
+    }
+    .container__links {
+        justify-self: center;
+        padding: 2px;
+        margin: 2px;
+    }
+    .l-wrap {
+        margin: 2px;
+        padding: .1rem;
+    }
+    .l-heading {
+        padding: 2px;
+        font-size: .8rem;
+        margin: 0;
+    }
+    .l-wrap a {
+        padding: 2px;
+        font-size: .7rem;
+    }
+    .i-heading {
+        padding: .1rem;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .container__article-1 p {
+        padding: .3rem .5rem;
+        font-size: 15px;
+    }
+    .a2-heading {
+        padding: .1rem;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .container__article-2 p {
+        padding: .3rem .5rem;
+        font-size: 15px;
+    }
+    .a3-heading {
+        padding: .1rem;
+        margin: 0;
+        font-size: 1.5rem;
+    }
+    .container__article-3 p {
+        padding: .3rem .5rem;
+        font-size: 15px;
+    }
     /* Footer */
     .footer__logo .-icon {
         width: 4.5rem;
@@ -308,5 +561,20 @@ strong {
     }
     .footer__social-link a {
         font-size: 1rem;
+    }
+}
+
+/* Mobile large screen */
+
+@media (min-width: 501px) and (max-width: 750px) {
+    /* Content */
+    /* History Page */
+    .container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-areas: "intro" "links" "article-2" "article-3";
+    }
+    .container__links {
+        justify-self: center;
     }
 }
