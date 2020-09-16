@@ -11,7 +11,7 @@ Static multi-paged [BCCI](https://www.bcci.tv/) demo website design to play arou
 - Hero article
 
 ## Demo
-[click here]()
+[click here for demo](https://demo-bcci.herokuapp.com/)
 
 ## Contributing
 Pull requests are welcome.
